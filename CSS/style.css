@@ -1,0 +1,188 @@
+/* Reset dan font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #A8D5E3 0%, #F2F0EA 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header dan Navbar */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 16px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+}
+
+.about, .contact {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.about-skills {
+  background: #fff;
+  padding: 40px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px #0001;
+  max-width: 650px;
+  margin: 40px auto;
+}
+
+.about-skills h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  text-align: center;
+}
+
+.skill-logo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* Formulir Kontak */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: filter 0.3s, background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #217dbb;
+    filter: brightness(1.15);
+}
+
+/* Responsif Mobile */
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .nav-links {
+        gap: 0.7rem;
+    }
+    .hero,
+    .about,
+    .contact {
+        padding: 35px 10px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.98rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo {
+        font-size: 1rem;
+    }
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    .contact-form button {
+        font-size: 0.92rem;
+    }
+}
